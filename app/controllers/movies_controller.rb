@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
   the_id = params.fetch("an_id")
 
   @the_movie = Movie.where({ :id => the_id }).at(0)
+  @director_of_movie = Movie.where({ :id => the_id }).at(0)
 
   #@filmography = Movie.where({ :director_id => @the_director.id })
 
